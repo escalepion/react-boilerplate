@@ -1,11 +1,14 @@
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import App from './App';
-import List from './pages/List';
+import Main from "./pages/Main";
 
-export default (
-    <Route path="/" component={App}>
-        <IndexRoute component={List} />
-    </Route>
+export default class extends Component {
+  render() {
+    return (
+      <Router>
+        <Route exact path="/" component={Main} />
+      </Router>
     );
+  }
+}
